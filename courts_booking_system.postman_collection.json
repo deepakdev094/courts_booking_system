@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "121307f1-a20d-41a0-aa7d-a0ce7723c895",
+		"name": "courts_booking_system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18431271"
+	},
+	"item": [
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "create booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"court_id\": 1,\n    \"date\" : \"07/02/2023\",\n    \"start_time\" : \"17:00\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/bookings?court_id=1&date=07/02/2023&start_time=17:00",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "court_id",
+									"value": "1"
+								},
+								{
+									"key": "date",
+									"value": "07/02/2023"
+								},
+								{
+									"key": "start_time",
+									"value": "17:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/bookings/1?notes=Not available",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bookings",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "notes",
+									"value": "Not available"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "availabilities",
+			"item": [
+				{
+					"name": "Availabilities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/availabilities",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"availabilities"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

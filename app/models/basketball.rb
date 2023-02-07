@@ -1,0 +1,3 @@
+class Basketball < Court
+
+end
